@@ -10,7 +10,7 @@
     <div id="chat"></div>
 
     <script>
-        const socket = new WebSocket("ws://example.com/socket-server"); // 웹 소켓 서버의 주소를 여기에 입력
+        const socket = new WebSocket("ws://localhost:8000"); // 웹 소켓 서버의 주소를 여기에 입력
 
         // 웹 소켓 연결이 열리면 이벤트 핸들러
         socket.addEventListener("open", (event) => {
