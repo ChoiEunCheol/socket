@@ -11,9 +11,9 @@ const wss = new WebSocket.Server({ server });
 app.use(express.static(path.join(__dirname, 'public')));
 
 // WebSocket 연결을 설정합니다.
-wss.on('connection', (ws) => {
+wss.on('connection', (ws,) => {
   console.log('웹 소켓 연결이 열렸습니다.');
-
+  
   // 웹 소켓으로부터 메시지를 수신하고 클라이언트로 다시 전송
   ws.on('message', (message) => {
     console.log(`받은 메시지: ${message}`);
@@ -29,5 +29,5 @@ wss.on('connection', (ws) => {
 const port = process.env.PORT || 8000;
 
 server.listen(port, () => {
-  console.log(`서버가 포트 ${port}에서 실행 중입니다.`);
+  console.log(`http://localhost:${port}`);
 });
