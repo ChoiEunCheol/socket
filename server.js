@@ -10,5 +10,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // 서버 시작
 app.listen(port, () => {
-  console.log(`https://localhost:${port}`);
+  console.log(`localhost:${port}`);
 });
