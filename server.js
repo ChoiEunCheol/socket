@@ -8,7 +8,7 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
 // 정적 파일 제공 (public 폴더 내의 파일)
-app.use(express.static(path.join(__dirname, 'public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // WebSocket 연결을 설정합니다.
 wss.on('connection', (ws) => {
